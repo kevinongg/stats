@@ -4,6 +4,7 @@
  */
 function getLength(numbers) {
   // TODO
+  return numbers.length;
 }
 
 /**
@@ -12,6 +13,15 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  let sum = 0;
+  // for (let i = 0; i < numbers.length; i++) {
+  //   const newSum = sum + numbers[i];
+  //    return newSum
+  // }
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
 }
 
 /**
@@ -20,6 +30,7 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  return getSum(numbers) / numbers.length;
 }
 
 /**
@@ -28,6 +39,18 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let smallestNum = numbers[0];
+  // for (let i = 1; i < numbers.length; i++) {
+  //   if (numbers[i] < smallestNum) {
+  //     smallestNum = numbers[i];
+  //   }
+  // }
+  for (const num of numbers) {
+    if (num < smallestNum) {
+      smallestNum = num;
+    }
+  }
+  return smallestNum;
 }
 
 /**
@@ -36,6 +59,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let largestNum = numbers[0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > largestNum) {
+      largestNum = numbers[i];
+    }
+  }
+  return largestNum;
 }
 
 /**
@@ -44,6 +74,8 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  const rangeNum = getMax(numbers) - getMin(numbers);
+  return rangeNum;
 }
 
 /**
@@ -52,6 +84,18 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  const evensArr = [];
+  // for (let i = 0; i < numbers.length; i++) {
+  //   if (numbers[i] % 2 === 0) {
+  //     evensArr.push(numbers[i]);
+  //   }
+  // }
+  for (const num of numbers) {
+    if (num % 2 === 0) {
+      evensArr.push(num);
+    }
+  }
+  return evensArr;
 }
 
 /**
@@ -60,6 +104,18 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  const oddsArr = [];
+  // for (let i = 0; i < numbers.length; i++) {
+  //   if (numbers[i] % 2 !== 0) {
+  //     oddsArr.push(numbers[i]);
+  //   }
+  // }
+  for (const num of numbers) {
+    if (num % 2 !== 0) {
+      oddsArr.push(num);
+    }
+  }
+  return oddsArr;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
